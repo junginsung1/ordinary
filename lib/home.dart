@@ -12,7 +12,7 @@ class _HomeState extends State<Home> {
   void jung() {
     Navigator.of(context).push(MaterialPageRoute(
         builder: (context) => MyHomePage(
-              title: '인성',
+              title: '윤정',
             )));
   }
 
