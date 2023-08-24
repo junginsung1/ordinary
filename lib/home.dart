@@ -10,19 +10,19 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List<Widget> titles = [
-    Text('이지셀러'),
-    Text('회사소개'),
-    Text('템플릿'),
-    Text('고객사례'),
-    Text('요금'),
-    Text('고객지원'),
-    Text('로그인'),
-    Text('무료시작하기'),
+    const Text('이지셀러'),
+    const Text('회사소개'),
+    const Text('템플릿'),
+    const Text('고객사례'),
+    const Text('요금'),
+    const Text('고객지원'),
+    const Text('로그인'),
+    const Text('무료시작하기'),
   ];
 
   void jung() {
     Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => MyHomePage(
+        builder: (context) => const MyHomePage(
               title: '윤정',
             )));
   }
@@ -32,10 +32,10 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Text('이지셀러'),
+          const Text('이지셀러'),
           Padding(
             padding: const EdgeInsets.all(20),
             child: Row(
@@ -44,56 +44,56 @@ class _HomeState extends State<Home> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('이지셀러'),
-                    SizedBox(
+                    const Text('이지셀러'),
+                    const SizedBox(
                       width: 20,
                     ),
                     DropdownButton(
-                      underline: SizedBox.shrink(),
+                      underline: const SizedBox.shrink(),
                       value: '회사소개',
                       items: const [
                         DropdownMenuItem(
-                          child: Text("회사소개"),
                           value: "회사소개",
+                          child: Text("회사소개"),
                         ),
                         DropdownMenuItem(
-                          child: Text("연혁"),
                           value: "연혁",
+                          child: Text("연혁"),
                         ),
                         DropdownMenuItem(
-                          child: Text("CEO"),
                           value: "CEO",
+                          child: Text("CEO"),
                         ),
                         DropdownMenuItem(
-                          child: Text("경영철학"),
                           value: "경영철학",
+                          child: Text("경영철학"),
                         ),
                         DropdownMenuItem(
-                          child: Text("정책"),
                           value: "정책",
+                          child: Text("정책"),
                         ),
                       ],
                       onChanged: (_) {},
                     ), // Text('회사소개'),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
-                    Text('템플릿'),
-                    SizedBox(
+                    const Text('템플릿'),
+                    const SizedBox(
                       width: 20,
                     ),
-                    Text('고객사례'),
-                    SizedBox(
+                    const Text('고객사례'),
+                    const SizedBox(
                       width: 20,
                     ),
-                    Text('요금'),
-                    SizedBox(
+                    const Text('요금'),
+                    const SizedBox(
                       width: 20,
                     ),
-                    Text('고객지원'),
+                    const Text('고객지원'),
                   ],
                 ),
-                Row(
+                const Row(
                   children: [
                     Text('로그인'),
                     SizedBox(
@@ -103,6 +103,18 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ],
+            ),
+          ),
+          Expanded(
+            child: Center(
+              child: Container(
+                width: MediaQuery.of(context).size.width / 2,
+                height: MediaQuery.of(context).size.height / 2,
+                color: Colors.blue,
+                child: Center(
+                  child: Text('컨테이너'),
+                ),
+              ),
             ),
           ),
         ],
