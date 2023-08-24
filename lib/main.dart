@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
       if (_counter >= 5) {
         _counter = 0;
       } else {
-        _counter++;
+        _counter = addNumber(_counter);
       }
 
       print(_counter);
@@ -48,13 +48,19 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void j() {
     setState(() {
-      if (_counter<=-5) {
+      if (_counter <= -5) {
         _counter = 0;
       } else {
         _counter--;
       }
       print(_counter);
     });
+  }
+
+  int addNumber(int input) {
+    int result = 0;
+    result = input + 1;
+    return result;
   }
 
   @override
@@ -65,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
+        child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
