@@ -17,7 +17,7 @@ class _LandingState extends State<Landing> {
         height: MediaQuery.of(context).size.height,
         color: primaryColor,
         child: Center(
-          child: Text('컨테이너'),
+          child: Text('박스'),
         ),
       ),
     );
